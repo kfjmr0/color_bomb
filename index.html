@@ -309,7 +309,7 @@
               ANIMATION_DT = 20,
               r_TIME_TO_EXPLOSION,
               PLAYER_COLOR_LIST = ['deeppink', 'mediumblue', 'lime', 'orange'],
-              COLOR_LIST = [ 'gray' ],
+              COLOR_LIST = [],
               
               prepareGame, copyMatrix, drawHorizontalLine, drawVerticalLine,
               renderMatrix, renderObtainedCells, drawCharacter, setBomb, explodeBomb, drawBomb,
@@ -412,6 +412,8 @@
                 }
               }
               
+              // set player's color 
+              COLOR_LIST = [ 'gray' ];
               if ( configMap.player_id === 0 ) {
                 COLOR_LIST.push( PLAYER_COLOR_LIST[configMap.player0_color], PLAYER_COLOR_LIST[configMap.player1_color] );
                 //COLOR_LIST.push( 'yellow', 'blue' );
