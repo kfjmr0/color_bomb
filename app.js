@@ -15,7 +15,7 @@ var
   BOMB_NUM = 3,
   TIME_TO_EXPLOSION = 3000,
   COLOR_NUMBER = 4,
-  GAME_DURATIONsec = 180,
+  GAME_DURATIONsec = 30,
   // ----- variables common in server and client/end -----
   initRoom, joinRoom;
 
@@ -69,11 +69,11 @@ joinRoom = function ( socket, room, name, player_id ) {
   });
   roomStateList[room].socketIdList[ player_id ] = socket_id;
   roomStateList[room].nameList[ player_id ] = name;
-  
+  /*
   console.log( name + ' join room ' + room 
     + ' with socket.id ' + socket.id
   );
-  
+  */
 };
 
 io.sockets.on('connection', function( socket ) {
@@ -298,7 +298,4 @@ io.sockets.on('connection', function( socket ) {
 io.set('log level', 0);
 //io.set('log level', 1);
 
-app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
-  var addr = app.address();
-  console.log("Server listening at", addr.address + ":" + addr.port);
-});
+app.listen(process.env.PORT || 3000);
