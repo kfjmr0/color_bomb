@@ -7,6 +7,9 @@
     "npm" : "3.10.10"
   },
   "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/kfjmr0/color_bomb.git"
